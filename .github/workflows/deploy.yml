@@ -1,0 +1,21 @@
+---
+name: Checks
+
+on: [push]
+
+job:
+  test-liniting:
+    name: Test and linting Checks
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Login to docker
+        use: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USER_NAME }}
+          password: ${{ secrets.MY_RECIPE_APP_SECRET }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Tests
+        run: docker-compose run --rm app sh -c "python manage.py test"
+      - name: Linting
+        run: docker-compose run --rm app sh -c "flake8"
