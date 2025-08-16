@@ -1,0 +1,77 @@
+# --- Python bytecode / caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# --- Build / packaging ---
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.python_packages/
+__pypackages__/
+
+# --- Django ---
+# collected static files (from STATIC_ROOT / collectstatic)
+staticfiles/
+static_root/
+# user uploads
+media/
+# local sqlite DB
+db.sqlite3
+*.sqlite3
+# logs
+*.log
+logs/
+# optional local overrides
+local_settings.py
+
+# (Note) Django migrations SHOULD be committed, so not ignored.
+
+# --- Testing / coverage / type-check ---
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+.pytest_cache/
+.tox/
+.nox/
+.mypy_cache/
+.pytype/
+.hypothesis/
+.coverage-reports/
+coverage.xml
+pytestdebug.log
+ruff_cache/
+.ruff_cache/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.iml
+
+Thumbs.db
+
+# --- Env / secrets (keep out of git) ---
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.crt
+
+# --- Docker / Compose (optional) ---
+docker-data/
+volumes/
+compose.override.yml
+
+
